@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(distortion_interactive)
+set(cinolib_DIR <YOUR_PATH_TO_CINOLIB>)
+set(CINOLIB_USES_OPENGL_GLFW_IMGUI ON)
+find_package(cinolib REQUIRED)
+add_executable(${PROJECT_NAME} main.cpp)
+target_link_libraries(${PROJECT_NAME} PUBLIC cinolib)
